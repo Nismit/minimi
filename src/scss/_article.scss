@@ -1,0 +1,131 @@
+//
+// _article.scss
+// style for article list and detail
+//
+
+.article {
+  margin: 0 1em;
+
+  &.-list {
+  }
+
+  &__link {
+    display: block;
+    padding: 1.3em 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+
+    &.-list {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__desc {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+
+  &__date {
+    &.-list {
+      margin: 0;
+      font-size: .9rem;
+    }
+  }
+
+  &__thumbnail {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // Headline 1-5
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  // Typography
+  strong {
+    background: linear-gradient(transparent 60%, #69d2e7 60%);
+  }
+
+  // Horizontal Rule
+  hr {
+    border: 0;
+
+    &:before {
+      content: "*\a0\a0\a0*\a0\a0\a0*";
+    }
+  }
+
+  // Table
+  table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin: .5em 0;
+
+    td {
+      border: 1px solid #ddd;
+      padding: .3em .5em;
+    }
+  }
+
+  // Blockquote
+  blockquote {
+    &:before, &:after {
+
+    }
+  }
+
+  // Code
+  code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+  }
+
+  // Pre
+  pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.5;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+
+    > code {
+      padding: 0;
+      font-size: 100%;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+
+}

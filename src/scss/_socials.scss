@@ -1,0 +1,13 @@
+//
+// _socials.scss
+// style for social network in footer
+//
+
+.socialList {
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    padding: .3em .8em;
+  }
+}

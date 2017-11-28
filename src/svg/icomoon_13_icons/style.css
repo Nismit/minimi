@@ -1,0 +1,56 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-tag {
+  width: 0.8454285714285714em;
+}
+
+.icon-calendar {
+  width: 0.9285714285714285em;
+}
+
+.icon-twitter {
+  width: 0.9285714285714285em;
+}
+
+.icon-facebook {
+  width: 0.5881428571428571em;
+}
+
+.icon-github {
+  width: 0.8571428571428571em;
+}
+
+.icon-feed {
+  width: 0.7862857142857141em;
+}
+
+.icon-chain {
+  width: 0.9285714285714285em;
+}
+
+.icon-linkedin {
+  width: 0.8571428571428571em;
+}
+
+.icon-rotate-left {
+  width: 0.8571428571428571em;
+}
+
+.icon-get-pocket {
+  width: 0.9597857142857142em;
+}
