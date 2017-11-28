@@ -1,0 +1,18 @@
+<nav role="pagenation">
+  <ul class="pager">
+    <li class="pager__item active"><a href="#" class="pager__link">1</a></li>
+    <li class="pager__item"><a href="#" class="pager__link">2</a></li>
+  </ul>
+</nav>
+
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    <nav class="pagination">
+      {{ if .Paginator.HasPrev }}
+      <a href="{{ .Paginator.Prev.URL }}">前へ</a>
+      {{ end }}
+      <span class="current-page">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+      {{ if .Paginator.HasNext }}
+      <a href="{{ .Paginator.Next.URL }}">次へ</a>
+      {{ end }}
+    </nav>
+  {{ end }}

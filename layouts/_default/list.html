@@ -1,0 +1,7 @@
+<article class="article -list">
+  <a href="{{ .Permalink }}" class="article__link">
+    <h1 class="article__title -list">{{ .Title }}</h1>
+    <p class="article__desc">{{ .Summary }}</p>
+    <p class="article__date -list"><time>{{ .Date.Format "Jan 02, 2006" }}</time></p>
+  </a>
+</article>
