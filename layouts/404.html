@@ -1,13 +1,5 @@
-{{ partial "header" . }}
+{{ define "title" }}{{ .Title }} | {{ end }}
 
-{{ partial "svg" . }}
-
-{{ partial "hero" . }}
-
-  <div role="main">
-    <div class="l-container">
-      <p>404 Not Found</p>
-    </div><!-- ./l-container -->
-  </div>
-
-{{ partial "footer" . }}
+{{ define "main" }}
+  <p>404 Not Found</p>
+{{ end }}

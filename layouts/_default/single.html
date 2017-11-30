@@ -1,60 +1,52 @@
-{{ partial "header" . }}
+{{ define "title" }}{{ .Title }} | {{ end }}
 
-{{ partial "svg" . }}
+{{ define "main" }}
+  <article class="article">
+    <h1 class="article__title">{{ .Title }}</h1>
 
-{{ partial "hero" . }}
+    <p class="article__date"><svg class="icon -small"><use xlink:href="#icon-calendar"/></svg> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
 
-  <div role="main">
-    <div class="l-container">
-      <article class="article">
-        <h1 class="article__title">{{ .Title }}</h1>
+    <div class="article__thumbnail">
+      <img src="http://via.placeholder.com/1200x400" alt="">
+    </div>
 
-        <p class="article__date"><svg class="icon -small"><use xlink:href="#icon-calendar"/></svg> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
+    {{ .Content }}
 
-        <div class="article__thumbnail">
-          <img src="http://via.placeholder.com/1200x400" alt="">
-        </div>
+    <div class="article__tags">
+      <svg class="icon"><use xlink:href="#icon-tag"/></svg>
+      <ul>
+        <li><a href="#">Tag One</a></li>
+        <li><a href="#">Tag Two</a></li>
+      </ul>
+    </div>
 
-        {{ .Content }}
+    <ul class="share">
+      <li class="share__item">
+        <a href="#" class="share__link -twitter"><svg class="icon"><use xlink:href="#icon-twitter"/></svg></a>
+      </li>
+      <li class="share__item">
+        <a href="#" class="share__link -facebook"><svg class="icon"><use xlink:href="#icon-facebook"/></svg></a>
+      </li>
+      <li class="share__item">
+        <a href="#" class="share__link -hatena"><svg class="icon"><use xlink:href="#icon-hatena"/></svg></a>
+      </li>
+      <li class="share__item">
+        <a href="#" class="share__link -pocket"><svg class="icon"><use xlink:href="#icon-get-pocket"/></svg></a>
+      </li>
+      <li class="share__item">
+        <a href="#" class="share__link -feedly"><svg class="icon"><use xlink:href="#icon-feedly"/></svg></a>
+      </li>
+    </ul>
+  </article>
 
-        <div class="article__tags">
-          <svg class="icon"><use xlink:href="#icon-tag"/></svg>
-          <ul>
-            <li><a href="#">Tag One</a></li>
-            <li><a href="#">Tag Two</a></li>
-          </ul>
-        </div>
+  {{ partial "advertise" . }}
 
-        <ul class="share">
-          <li class="share__item">
-            <a href="#" class="share__link -twitter"><svg class="icon"><use xlink:href="#icon-twitter"/></svg></a>
-          </li>
-          <li class="share__item">
-            <a href="#" class="share__link -facebook"><svg class="icon"><use xlink:href="#icon-facebook"/></svg></a>
-          </li>
-          <li class="share__item">
-            <a href="#" class="share__link -hatena"><svg class="icon"><use xlink:href="#icon-hatena"/></svg></a>
-          </li>
-          <li class="share__item">
-            <a href="#" class="share__link -pocket"><svg class="icon"><use xlink:href="#icon-get-pocket"/></svg></a>
-          </li>
-          <li class="share__item">
-            <a href="#" class="share__link -feedly"><svg class="icon"><use xlink:href="#icon-feedly"/></svg></a>
-          </li>
-        </ul>
-      </article>
-
-      {{ partial "advertise" . }}
-
-      <div class="">
-        <p>Prev Link</p>
-        <p>Next Link</p>
-      </div>
-
-      {{ partial "tagCloud" . }}
-
-      {{ partial "advertise" . }}
-    </div><!-- ./l-container -->
+  <div class="">
+    <p>Prev Link</p>
+    <p>Next Link</p>
   </div>
 
-{{ partial "footer" . }}
+  {{ partial "tagCloud" . }}
+
+  {{ partial "advertise" . }}
+{{ end }}

@@ -1,25 +1,9 @@
-{{ partial "header" . }}
+{{ define "title" }}{{ .Title }} | {{ end }}
 
-{{ partial "svg" . }}
+{{ define "main" }}
+  <h1 style="text-align: center;">Tag: {{ .Title }}</h1>
 
-{{ partial "hero" . }}
-
-  <div role="main">
-    <div class="l-container">
-      <h1 style="text-align: center;">Tag: ##</h1>
-
-      {{ range (.Paginator 10).Data.Pages }}
-        {{ .Render "list" }}
-      {{ end }}
-
-      {{ partial "pagenation" . }}
-
-      {{ partial "advertise" . }}
-
-      {{ partial "tagCloud" . }}
-
-      {{ partial "advertise" . }}
-    </div><!-- ./l-container -->
-  </div>
-
-{{ partial "footer" . }}
+  {{ range (.Paginator 10).Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+{{ end }}
