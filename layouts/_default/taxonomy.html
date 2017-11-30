@@ -6,4 +6,12 @@
   {{ range (.Paginator 10).Pages }}
     {{ .Render "li" }}
   {{ end }}
+
+  {{ partial "pagenation" . }}
+
+  {{ partial "advertise" . }}
+
+  {{ partial "tagCloud" . }}
+
+  {{ partial "advertise" . }}
 {{ end }}
