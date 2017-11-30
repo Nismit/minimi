@@ -27,9 +27,9 @@ const dir = {
   scss: 'src/scss',
   js: 'src/js',
   img: 'src/img',
-  min_css: 'themes/minimi/static/css',
-  min_js: 'themes/minimi/static/js',
-  img_dist: 'themes/minimi/static/images'
+  min_css: 'static/css',
+  min_js: 'static/js',
+  img_dist: 'static/images'
 };
 
 gulp.task('browser-sync', function() {
