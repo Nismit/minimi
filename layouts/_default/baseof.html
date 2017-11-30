@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {{ with .Description }}
+      <meta name="description" content="{{ . }}">
+    {{ else }}
+      {{ with .Site.Params.description }}
+        <meta name="description" content="{{ . }}">
+      {{ end }}
+    {{ end }}
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
+    {{ .Hugo.Generator }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/google_news.html" . }}
+    <link rel="icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ with .RSSLink }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">{{ end }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" media="all">
+    {{ template "_internal/google_analytics.html" . }}
+	</head>
+<body>
+
+{{ partial "svg" . }}
+
+{{ partial "hero" . }}
+
+  <div role="main">
+    <div class="l-container">
+      {{ block "main" . }}{{ end }}
+    </div><!-- ./l-container -->
+  </div>
+
+  <footer>
+    <ul class="socialList">
+      <li class="socialList__item"><a href="#"><svg class="icon -small"><use xlink:href="#icon-feed"/></svg></a></li>
+      <li class="socialList__item"><a href="#"><svg class="icon -small"><use xlink:href="#icon-twitter"/></svg></a></li>
+      <li class="socialList__item"><svg class="icon -small -heart"><use xlink:href="#icon-heart"/></svg></li>
+      <li class="socialList__item"><a href="#"><svg class="icon -small"><use xlink:href="#icon-github"/></svg></a></li>
+      <li class="socialList__item"><a href="#"><svg class="icon -small"><use xlink:href="#icon-linkedin"/></svg></a></li>
+    </ul>
+
+    <p class="copyright">&copy; 2017 - NISLOG<br>
+    Created with <svg class="icon -ex-small -heart"><use xlink:href="#icon-heart"/></svg> | Powered by <a href="https://gohugo.io/" tagert="_blank">Hugo</a></p>
+  </footer>
+  </body>
+</html>
