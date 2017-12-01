@@ -20,7 +20,7 @@
     <div class="article__tags">
       <ul>
         {{ range . }}
-        <li><svg class="icon -small"><use xlink:href="#icon-tag"/></svg><a href="{{ "/tags/" | relLangURL }}{{ lower . }}/">{{ . }}</a></li>
+        <li class="article__tags__item"><svg class="icon -tag"><use xlink:href="#icon-tag"/></svg><a href="{{ "/tags/" | relLangURL }}{{ lower . }}/">{{ . }}</a></li>
         {{ end }}
       </ul>
     </div>
