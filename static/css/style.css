@@ -470,12 +470,14 @@ figure {
   .article__thumbnail img {
     max-width: 100%;
     height: auto; }
-  .article__tags__item {
-    display: inline-block;
-    margin-left: 4.8px;
-    margin-left: .3rem; }
-    .article__tags__item:first-child {
-      margin-left: 0; }
+  .article__tags {
+    text-align: right; }
+    .article__tags__item {
+      display: inline-block;
+      margin-left: 4.8px;
+      margin-left: .3rem; }
+      .article__tags__item:first-child {
+        margin-left: 0; }
   .article h1 {
     font-size: 33.6px;
     font-size: 2.1rem; }
