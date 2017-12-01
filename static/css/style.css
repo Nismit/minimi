@@ -470,6 +470,22 @@ figure {
   .article__thumbnail img {
     max-width: 100%;
     height: auto; }
+  .article__toc {
+    margin: 20.8px auto;
+    margin: 1.3rem auto;
+    padding: 8px;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px; }
+    .article__toc__title {
+      text-align: center;
+      font-weight: bold;
+      margin: 4.8px auto;
+      margin: .3rem auto; }
+    .article__toc ul {
+      list-style-type: decimal;
+      margin-left: 22.4px;
+      margin-left: 1.4rem; }
   .article__tags {
     text-align: right; }
     .article__tags__item {
@@ -494,7 +510,7 @@ figure {
     font-size: 17.6px;
     font-size: 1.1rem; }
   .article strong {
-    background: linear-gradient(transparent 60%, #69d2e7 60%); }
+    background: linear-gradient(transparent 70%, #69d2e7 70%); }
   .article hr {
     border: 0; }
     .article hr:before {
