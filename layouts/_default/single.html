@@ -10,33 +10,24 @@
       <img src="http://via.placeholder.com/1200x400" alt="">
     </div>
 
-    {{ .Content }}
-
-    <div class="article__tags">
-      <svg class="icon"><use xlink:href="#icon-tag"/></svg>
-      <ul>
-        <li><a href="#">Tag One</a></li>
-        <li><a href="#">Tag Two</a></li>
-      </ul>
+    <div class="article__tableOfContents">
+      {{.TableOfContents}}
     </div>
 
-    <ul class="share">
-      <li class="share__item">
-        <a href="#" class="share__link -twitter"><svg class="icon"><use xlink:href="#icon-twitter"/></svg></a>
-      </li>
-      <li class="share__item">
-        <a href="#" class="share__link -facebook"><svg class="icon"><use xlink:href="#icon-facebook"/></svg></a>
-      </li>
-      <li class="share__item">
-        <a href="#" class="share__link -hatena"><svg class="icon"><use xlink:href="#icon-hatena"/></svg></a>
-      </li>
-      <li class="share__item">
-        <a href="#" class="share__link -pocket"><svg class="icon"><use xlink:href="#icon-get-pocket"/></svg></a>
-      </li>
-      <li class="share__item">
-        <a href="#" class="share__link -feedly"><svg class="icon"><use xlink:href="#icon-feedly"/></svg></a>
-      </li>
-    </ul>
+    {{ .Content }}
+
+    {{ with .Params.tags }}
+    <div class="article__tags">
+      <ul>
+        {{ range . }}
+        <li><svg class="icon -small"><use xlink:href="#icon-tag"/></svg><a href="{{ "/tags/" | relLangURL }}{{ lower . }}/">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+
+    {{ partial "share" . }}
   </article>
 
   {{ partial "advertise" . }}
