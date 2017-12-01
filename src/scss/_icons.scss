@@ -20,4 +20,18 @@
   &.-heart {
     fill: #da001e;
   }
+
+  &.-tag {
+    width: 23px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+  }
+
+  &.-share {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 2px;
+  }
 }
