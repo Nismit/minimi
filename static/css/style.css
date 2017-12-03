@@ -584,6 +584,24 @@ figure {
   .active > .pager__link {
     background-color: #aaa; }
 
+.pager-single {
+  margin: 0 1em; }
+  .pager-single__item {
+    display: block;
+    padding: 16px;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd; }
+    .pager-single__item:first-child {
+      border-top: 1px solid #ddd; }
+    .pager-single__item:hover {
+      text-decoration: none;
+      background-color: #fafafa; }
+  .pager-single__label {
+    margin: 0;
+    color: #333; }
+  .pager-single__title {
+    margin: 0; }
+
 .socialList {
   text-align: center; }
   .socialList__item {
