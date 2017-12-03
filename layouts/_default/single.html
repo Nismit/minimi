@@ -4,7 +4,7 @@
   <article class="article">
     <h1 class="article__title">{{ .Title }}</h1>
 
-    <p class="article__date"><svg class="icon -small"><use xlink:href="#icon-calendar"/></svg> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
+    <p class="article__date"><svg class="icon -ex-small"><use xlink:href="#icon-calendar"/></svg> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
 
     <div class="article__thumbnail">
       <img src="http://via.placeholder.com/1200x400" alt="">
