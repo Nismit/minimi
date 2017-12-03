@@ -14,10 +14,17 @@
   &__link {
     border: 1px solid $_base-border-color;
     padding: .5em .8em;
+
+    &:hover {
+      background-color: #0adebd;
+      color: $_base-font-color;
+      text-decoration: none;
+    }
   }
 
   .active > &__link {
-    background-color: #aaa;
+    background-color: #0adebd;
+    color: $_base-font-color;
   }
 }
 

@@ -591,8 +591,13 @@ figure {
   .pager__link {
     border: 1px solid #ddd;
     padding: .5em .8em; }
+    .pager__link:hover {
+      background-color: #0adebd;
+      color: #333;
+      text-decoration: none; }
   .active > .pager__link {
-    background-color: #aaa; }
+    background-color: #0adebd;
+    color: #333; }
 
 .pager-single {
   margin: 0 1em; }
