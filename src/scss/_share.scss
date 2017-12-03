@@ -4,8 +4,8 @@
 //
 
 .share {
-  border-top: 3px solid #ddd;
-  border-bottom: 3px solid #ddd;
+  border-top: 3px solid $_base-border-color;
+  border-bottom: 3px solid $_base-border-color;
   margin: 1em 0;
 
   &__item {
@@ -21,7 +21,7 @@
 
   &__link {
     display: inline-block;
-    background-color: #ddd;
+    background-color: $_base-border-color;
     border-radius: 3px;
     padding: .25rem .55rem;
 

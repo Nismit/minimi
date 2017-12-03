@@ -12,8 +12,8 @@
   &__link {
     display: block;
     padding: 1.3em 0;
-    border-bottom: 1px solid #ddd;
-    color: #333;
+    border-bottom: 1px solid $_base-border-color;
+    color: $_base-font-color;
 
     &:hover {
       text-decoration: none;
@@ -50,7 +50,7 @@
   &__toc {
     margin: 1.3rem auto;
     padding: .5rem;
-    border: 1px solid #ddd;
+    border: 1px solid $_base-border-color;
     border-radius: 5px;
 
     &__title {
@@ -116,12 +116,12 @@
   // Table
   table {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid $_base-border-color;
     border-collapse: collapse;
     margin: .5em 0;
 
     td {
-      border: 1px solid #ddd;
+      border: 1px solid $_base-border-color;
       padding: .3em .5em;
     }
   }
