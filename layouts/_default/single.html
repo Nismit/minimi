@@ -4,23 +4,26 @@
   <article class="article">
     <h1 class="article__title">{{ .Title }}</h1>
 
-    <p class="article__date"><svg class="icon -small"><use xlink:href="#icon-calendar"/></svg> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
+    <p class="article__date"><svg class="icon -ex-small"><use xlink:href="#icon-calendar"/></svg> {{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
 
     <div class="article__thumbnail">
       <img src="http://via.placeholder.com/1200x400" alt="">
     </div>
 
-    <div class="article__tableOfContents">
+    <div class="article__toc">
+      <p class="article__toc__title">目次</p>
       {{.TableOfContents}}
     </div>
 
+    <div class="article__body">
     {{ .Content }}
+    </div>
 
     {{ with .Params.tags }}
     <div class="article__tags">
       <ul>
         {{ range . }}
-        <li><svg class="icon -small"><use xlink:href="#icon-tag"/></svg><a href="{{ "/tags/" | relLangURL }}{{ lower . }}/">{{ . }}</a></li>
+        <li class="article__tags__item"><svg class="icon -tag"><use xlink:href="#icon-tag"/></svg><a href="{{ "/tags/" | relLangURL }}{{ lower . }}/">{{ . }}</a></li>
         {{ end }}
       </ul>
     </div>
@@ -32,10 +35,7 @@
 
   {{ partial "advertise" . }}
 
-  <div class="">
-    <p>Prev Link</p>
-    <p>Next Link</p>
-  </div>
+  {{ partial "pagenation-single" . }}
 
   {{ partial "tagCloud" . }}
 
