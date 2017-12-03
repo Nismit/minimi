@@ -543,11 +543,35 @@ figure {
       border-radius: 0; }
 
 .share {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 3px solid #ddd;
+  border-bottom: 3px solid #ddd;
   margin: 1em 0; }
   .share__item {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 8px;
+    margin-top: .5rem;
+    margin-bottom: 8px;
+    margin-bottom: .5rem;
+    margin-left: 9.6px;
+    margin-left: .6rem; }
+    .share__item:first-child {
+      margin-left: 0; }
+  .share__link {
+    display: inline-block;
+    background-color: #ddd;
+    border-radius: 3px;
+    padding: 4px 8.8px;
+    padding: .25rem .55rem; }
+    .share__link.-twitter {
+      background-color: #1da1f2; }
+    .share__link.-facebook {
+      background-color: #3b5998; }
+    .share__link.-hatena {
+      background-color: #008fde; }
+    .share__link.-pocket {
+      background-color: #ef4056; }
+    .share__link.-feedly {
+      background-color: #2bb24c; }
 
 .pager {
   text-align: center;
@@ -583,10 +607,11 @@ figure {
     position: relative;
     top: 3px; }
   .icon.-share {
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 23px;
     position: relative;
-    top: 2px; }
+    top: 4px;
+    fill: #fff; }
 
 .tagBlock {
   margin: 1.5em 1em; }
