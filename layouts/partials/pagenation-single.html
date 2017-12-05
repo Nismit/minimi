@@ -1,12 +1,16 @@
 <nav role="pagenation">
   <div class="pager-single">
-    <a href="#" class="pager-single__item">
-      <p class="pager-single__label">Prev Link</p>
-      <p class="pager-single__title">Title</p>
+    {{ with .Prev }}
+    <a href="{{ .Permalink }}" class="pager-single__item">
+      <p class="pager-single__label">Previous Entry</p>
+      <p class="pager-single__title">{{ .Title }}</p>
     </a>
-    <a href="#" class="pager-single__item">
-      <p class="pager-single__label">Next Link</p>
-      <p class="pager-single__title">Title</p>
+    {{ end }}
+    {{ with .Next }}
+    <a href="{{ .Permalink }}" class="pager-single__item">
+      <p class="pager-single__label">Next Entry</p>
+      <p class="pager-single__title">{{ .Title }}</p>
     </a>
+    {{ end }}
   </div>
 </nav>
