@@ -445,6 +445,10 @@ figure {
   max-width: 45em;
   margin: auto; }
 
+.hero {
+  text-align: center;
+  margin: 2em auto; }
+
 .article {
   margin: 0 1em; }
   .article__link {
@@ -634,7 +638,9 @@ figure {
     height: 12px; }
   .icon.-logo {
     width: 80px;
-    height: 80px; }
+    height: 80px;
+    position: relative;
+    top: 7px; }
   .icon.-heart {
     fill: #da001e; }
   .icon.-tag {
