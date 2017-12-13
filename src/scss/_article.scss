@@ -121,7 +121,7 @@
     border-collapse: collapse;
     margin: .5em 0;
 
-    td {
+    th, td {
       border: 1px solid $_base-border-color;
       padding: .3em .5em;
     }

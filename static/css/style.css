@@ -534,7 +534,7 @@ figure {
   border: 1px solid #ddd;
   border-collapse: collapse;
   margin: .5em 0; }
-  .article__body table td {
+  .article__body table th, .article__body table td {
     border: 1px solid #ddd;
     padding: .3em .5em; }
 
