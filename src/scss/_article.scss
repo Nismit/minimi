@@ -21,9 +21,11 @@
   }
 
   &__title {
+    margin-bottom: .5em;
     font-size: 1.5rem;
 
     &.-list {
+      margin-bottom: 0;
       font-size: 1.4rem;
     }
   }
@@ -34,10 +36,8 @@
   }
 
   &__date {
-    &.-list {
-      margin: 0;
-      font-size: .9rem;
-    }
+    margin: 0;
+    font-size: .9rem;
   }
 
   &__thumbnail {
