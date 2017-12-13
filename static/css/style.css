@@ -459,15 +459,17 @@ figure {
     .article__link:hover {
       text-decoration: none; }
   .article__title {
+    margin-bottom: .5em;
     font-size: 24px;
     font-size: 1.5rem; }
     .article__title.-list {
+      margin-bottom: 0;
       font-size: 22.4px;
       font-size: 1.4rem; }
   .article__desc {
     margin-top: .5em;
     margin-bottom: .5em; }
-  .article__date.-list {
+  .article__date {
     margin: 0;
     font-size: 14.4px;
     font-size: .9rem; }
@@ -532,7 +534,7 @@ figure {
   border: 1px solid #ddd;
   border-collapse: collapse;
   margin: .5em 0; }
-  .article__body table td {
+  .article__body table th, .article__body table td {
     border: 1px solid #ddd;
     padding: .3em .5em; }
 
