@@ -18,7 +18,7 @@
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/google_news.html" . }}
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="{{ .Site.BaseURL }}img/favicon.ico">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ if .RSSLink }}
