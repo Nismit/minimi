@@ -504,6 +504,7 @@ figure {
 
 .article__body h1 {
   padding-bottom: .10em;
+  margin-top: 2em;
   border-bottom: 4px solid #019be8;
   font-size: 23.2px;
   font-size: 1.45rem;
