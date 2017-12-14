@@ -3,18 +3,20 @@
 {{ define "main" }}
   <article class="article">
     <p class="article__date">{{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</p>
-    
+
     <h1 class="article__title">{{ .Title }}</h1>
 
     <div class="article__thumbnail">
       <img src="http://via.placeholder.com/1200x400" alt="">
     </div>
 
+    {{ if eq .Params.toc true }}
     <div class="article__toc">
       <p class="article__toc__title">目次</p>
       {{.TableOfContents}}
     </div>
-
+    {{ end }}
+    
     <div class="article__body">
     {{ .Content }}
     </div>
