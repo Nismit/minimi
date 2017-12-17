@@ -4,6 +4,6 @@ date = {{ .Date }}
 title = ""
 description = ""
 tags = []
-slug = ""
+eyecatch = ""
 toc = false
 +++
