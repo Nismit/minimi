@@ -26,7 +26,8 @@
     position: relative;
     outline: none;
     transition: all .2s;
-    color: $_base-font-color;
+    // color: $_base-font-color;
+    color: $_primary-font-color;
 
     &:before, &:after {
       content: '';
