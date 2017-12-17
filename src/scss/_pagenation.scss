@@ -16,15 +16,15 @@
     padding: .5em .8em;
 
     &:hover {
-      background-color: #0adebd;
-      color: $_base-font-color;
+      background-color: $_tertiary-font-colors;
+      color: #fff;
       text-decoration: none;
     }
   }
 
   .active > &__link {
-    background-color: #0adebd;
-    color: $_base-font-color;
+    background-color: $_tertiary-font-colors;
+    color: #fff;
   }
 }
 
