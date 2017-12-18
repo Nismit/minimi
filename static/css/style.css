@@ -491,6 +491,10 @@ figure {
       list-style-type: decimal;
       margin-left: 22.4px;
       margin-left: 1.4rem; }
+      .article__toc ul ul {
+        display: none; }
+      .article__toc ul ul:first-child {
+        display: block; }
   .article__tags {
     margin-top: 32px;
     margin-top: 2rem;
@@ -543,6 +547,28 @@ figure {
   .article__body table th, .article__body table td {
     border: 1px solid #ddd;
     padding: .3em .5em; }
+
+.article__body blockquote {
+  font-style: italic;
+  position: relative;
+  margin: 16px 0;
+  margin: 1rem 0; }
+  .article__body blockquote:before, .article__body blockquote:after {
+    color: rgba(51, 51, 51, 0.1);
+    font-size: 120px;
+    font-style: normal; }
+  .article__body blockquote:before {
+    content: '“';
+    position: absolute;
+    left: 10px;
+    top: 48px; }
+  .article__body blockquote:after {
+    content: '”';
+    position: absolute;
+    right: 15px;
+    bottom: -15px; }
+  .article__body blockquote p:last-child {
+    text-align: right; }
 
 .article__body code {
   padding: 0.2em 0.4em;
