@@ -535,6 +535,10 @@ figure {
 .article__body strong {
   background: linear-gradient(transparent 70%, #69d2e7 70%); }
 
+.article__body img {
+  max-width: 100%;
+  vertical-align: bottom; }
+
 .article__body hr {
   border: 0; }
   .article__body hr:before {
