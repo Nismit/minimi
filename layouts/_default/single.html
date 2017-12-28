@@ -6,7 +6,7 @@
 
     <h1 class="article__title">{{ .Title }}</h1>
 
-    {{ if isset .Params "eyecatch" }}
+    {{ if .Params.eyecatch }}
     <div class="article__thumbnail">
       <img src="{{ .Params.eyecatch }}"/>
     </div>
