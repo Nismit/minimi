@@ -63,6 +63,17 @@ gulp.task('scss', function() {
 		.pipe(browser.reload({ stream:true }))
 });
 
+gulp.task('prodSCSS', function() {
+	gulp.src(dir.scss + '/**/*.scss')
+		.pipe(plumber(errorHandler))
+		.pipe(sass())
+		.pipe(please({
+      autoprefixer: {'browsers': ['last 2 versions']},
+      minifier: false
+		}))
+		.pipe(gulp.dest(dir.min_css))
+});
+
 gulp.task('minifyCSS', function() {
   gulp.src(dir.min_css + '/*.css' )
     .pipe(plumber(errorHandler))
@@ -93,4 +104,4 @@ gulp.task('default',['browser-sync'], function() {
 
 gulp.task('build', ['scss', 'js', 'image']);
 
-gulp.task('prod', ['minifyCSS']);
+gulp.task('prod', ['prodSCSS', 'minifyCSS']);
