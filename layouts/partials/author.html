@@ -1,0 +1,26 @@
+<div class="author">
+  <div class="author__picture--wrapper">
+    <svg class="author__picture">
+      <defs>
+        <polygon points="140,112.5 75,150 10,112.5 10,37.5 75,0 140,37.5 " id="shape-hex-polygon" />
+      </defs>
+      <clipPath id="hex-clip">
+        <use xlink:href="#shape-hex-polygon" x="0" y="0" />
+      </clipPath>
+      <image x="0" y="0" width="150" height="150" xlink:href="{{ .Site.BaseURL }}img/300x300.png" clip-path="url(#hex-clip)" />
+    </svg>
+  </div>
+  <div>
+    <div class="author__desc">
+      <h3>Author Name</h3>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna leo, iaculis vitae velit eu,
+      scelerisque blandit felis. Vivamus lacus elit, placerat in ligula ac, rhoncus pretium nisl.</p>
+
+      <ul class="author__social">
+        <li class="author__social__item"><a href="https://twitter.com/nismit_" target="_blank"><svg class="icon -small"><use xlink:href="#icon-twitter"/></svg></a></li>
+        <li class="author__social__item"><a href="https://github.com/Nismit" target="_blank"><svg class="icon -small"><use xlink:href="#icon-github"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
