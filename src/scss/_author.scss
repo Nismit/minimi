@@ -1,0 +1,34 @@
+//
+// _author.scss
+// style for author block in each single page
+//
+
+.author {
+  margin-top: 3em;
+  border: 1px solid #ddd;
+  padding: 1em;
+
+  @media screen and (min-width: 48em) {
+    display: flex;
+
+    &__desc {
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__picture {
+    width: 150px;
+    height: 150px;
+
+    &--wrapper {
+      text-align: center;
+    }
+  }
+
+  &__social {
+    &__item {
+      display: inline-block;
+      padding: .5em .8em 0 0;
+    }
+  }
+}
