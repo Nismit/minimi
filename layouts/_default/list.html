@@ -1,6 +1,7 @@
 {{ define "title" }}{{ .Title }} | {{ end }}
 
 {{ define "main" }}
+  {{ $Paginator := .Paginate (where .Data.Pages "Type" "post") }}
   {{ range (.Paginator 5).Pages }}
     {{ .Render "li" }}
   {{ end }}
